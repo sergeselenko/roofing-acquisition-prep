@@ -828,7 +828,7 @@
           </div>
           <h3 class="cat-title" style="margin-top:20px">Sources for the numbers on this page</h3>
           <ul class="src-list">
-            <li><strong>SDE anchor — Legacy ETA, <em>2026 Roofing Business Sales Report</em></strong> (286 roofing transactions): median 2.2× SDE; by revenue band — under $1M: 2.19× · $1–3M: 2.09× · $3–5M: 2.69× · $5M+: 3.51× (the source itself flags the largest band's sample as small). <a href="https://legacy-eta.com/hubfs/2026%20Website%20Assets/Resources/2026-Roofing-Business-Sales-Report.pdf?hsLang=en" target="_blank" rel="noopener">Report (PDF)</a></li>
+            <li><strong>SDE anchor — Legacy ETA, <em>2026 Roofing Business Sales Report</em></strong> (286 roofing transactions): median 2.2× SDE; by revenue band — under $1M: 2.19× · $1–5M: 2.09× · $5–10M: 2.69× · over $10M: 3.51× (the source itself flags the largest band's sample as small). <a href="https://legacy-eta.com/hubfs/2026%20Website%20Assets/Resources/2026-Roofing-Business-Sales-Report.pdf?hsLang=en" target="_blank" rel="noopener">Report (PDF)</a></li>
             <li><strong>EBITDA anchor — Axial, <em>Valuation Multiples by Company Size, Sector &amp; Buyer Type</em></strong> (closed deals Q3 2024–Q3 2026, published Sep 2026): construction &amp; trade services closed median 3.8× EBITDA; only 12% of sector deals closed above 6×. <a href="https://www.axial.net/forum/valuation-multiples/" target="_blank" rel="noopener">axial.net</a></li>
             <li><strong>Stream pricing — single-source, labelled:</strong> insurance/storm revenue at ½–⅔ of the retail multiple, and commercial maintenance at +0.5–0.8 turns, are one sell-side advisor's rules of thumb (CT Acquisitions exit-prep guides, 2026) with no closed-deal corroboration — the calculator uses the conservative ends (½–⅔ as the range; +0.5 turns) and labels them wherever they appear. The <em>direction</em> — retail priced above storm, contracted service above project work — is corroborated by multiple independent practitioner sources.</li>
             <li><strong>Normalization:</strong> 3–5 year averaging of storm revenue is described by Masswell Capital Advisors and Greymont Advisors (Oct 2026); buyers prefer storm share below roughly a quarter of revenue (Masswell — single source); above ~40% storm share, expect earn-out/re-trade treatment (Greymont — single source).</li>
@@ -1096,9 +1096,9 @@
            SDE multiple by revenue band; overall median 2.2x, median price ~$540K. */
         sdeBands: [
           { maxRev: 1000000, mult: 2.19, label: "Under $1M revenue", note: "Legacy ETA closed deals" },
-          { maxRev: 3000000, mult: 2.09, label: "$1M – $3M revenue", note: "Legacy ETA closed deals" },
-          { maxRev: 5000000, mult: 2.69, label: "$3M – $5M revenue", note: "Legacy ETA closed deals" },
-          { maxRev: Infinity, mult: 3.51, label: "$5M+ revenue", note: "Legacy ETA closed deals — source flags this band's sample as small" }
+          { maxRev: 5000000, mult: 2.09, label: "$1M – $5M revenue", note: "Legacy ETA closed deals" },
+          { maxRev: 10000000, mult: 2.69, label: "$5M – $10M revenue", note: "Legacy ETA closed deals" },
+          { maxRev: Infinity, mult: 3.51, label: "$10M+ revenue", note: "Legacy ETA closed deals — source flags this band's sample as small" }
         ],
         sdeMedian: 2.2,
         ebitdaAnchor: 3.8,        /* Axial closed deals: construction & trade services median */
@@ -1337,7 +1337,7 @@
       var sim = { calls_pm: 0, forms_pm: 0, ai_cost: "", ticket_retail: 13500, ticket_ins: 17600, ticket_repair_retail: 1100, ticket_repair_ins: 4699, repair_share_pct: 25, after_hours_pct: 29, est_rate: "", contract_value: "" };
       var marginPct = 20;
       var surgeOn = false;
-      var LEAD_EMAIL = "sergeosaulenko@gmail.com";
+      var LEAD_EMAIL = "serge@selenko.com";
 
       function save() {
         try {
